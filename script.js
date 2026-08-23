@@ -26,4 +26,37 @@ addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));menu.
 document.querySelectorAll('.faq-question').forEach(q=>q.addEventListener('click',()=>{const item=q.parentElement,was=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>{x.classList.remove('open');x.querySelector('button').setAttribute('aria-expanded','false')});if(!was){item.classList.add('open');q.setAttribute('aria-expanded','true')}}));
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 let slide=0;const track=document.querySelector('#testimonial-track');function updateSlider(){if(innerWidth<561){track.querySelectorAll('.testimonial').forEach((el,i)=>el.style.display=i===slide?'block':'none')}else track.querySelectorAll('.testimonial').forEach(el=>el.style.display='block')}updateSlider();document.querySelector('.next').onclick=()=>{slide=(slide+1)%testimonials.length;updateSlider()};document.querySelector('.previous').onclick=()=>{slide=(slide+testimonials.length-1)%testimonials.length;updateSlider()};addEventListener('resize',updateSlider);
-document.querySelector('#contact-form').addEventListener('submit',e=>{e.preventDefault();const status=e.currentTarget.querySelector('.form-status');status.textContent='Thanks — your project inquiry is ready to send. We’ll be in touch shortly.';e.currentTarget.reset();});
+document.querySelector('#contact-form').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const form=e.currentTarget;
+  const status=form.querySelector('.form-status');
+  const button=form.querySelector('button[type="submit"]');
+  const originalButtonText=button.innerHTML;
+  button.disabled=true;
+  button.textContent='Sending…';
+  status.textContent='';
+  status.classList.remove('form-status-error','form-status-success');
+  try{
+    const response=await fetch('https://formspree.io/f/moeabgjk',{
+      method:'POST',
+      body:new FormData(form),
+      headers:{'Accept':'application/json'}
+    });
+    if(response.ok){
+      status.textContent='Thanks — your project inquiry has been sent. We\u2019ll be in touch shortly.';
+      status.classList.add('form-status-success');
+      form.reset();
+    }else{
+      const data=await response.json().catch(()=>null);
+      const message=data&&data.errors&&data.errors.length?data.errors.map(x=>x.message).join(', '):'Something went wrong. Please try again or email us directly.';
+      status.textContent=message;
+      status.classList.add('form-status-error');
+    }
+  }catch(err){
+    status.textContent='Something went wrong. Please check your connection and try again, or email us directly.';
+    status.classList.add('form-status-error');
+  }finally{
+    button.disabled=false;
+    button.innerHTML=originalButtonText;
+  }
+});
