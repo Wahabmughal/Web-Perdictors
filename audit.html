@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get a free, no-obligation audit of your website or app from Web Perdictors — performance, conversion, AI-readiness and design feedback delivered within 48 hours." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://web-perdictors.vercel.app/audit.html" />
+  <meta property="og:title" content="Free Website &amp; App Audit | Web Perdictors" />
+  <meta property="og:description" content="Get a free, no-obligation audit of your website or app — performance, conversion and AI-readiness feedback within 48 hours." />
+  <meta property="og:image" content="https://web-perdictors.vercel.app/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://web-perdictors.vercel.app/audit.html" />
+  <meta property="og:site_name" content="Web Perdictors" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Website &amp; App Audit | Web Perdictors" />
+  <meta name="twitter:description" content="Get a free, no-obligation audit of your website or app — performance, conversion and AI-readiness feedback within 48 hours." />
+  <meta name="twitter:image" content="https://web-perdictors.vercel.app/og-image.png" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Free Website &amp; App Audit | Web Perdictors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .audit-hero{background:#fcfcfc;padding:70px 0 40px}
+    .audit-wrap{max-width:640px;margin:0 auto;text-align:center}
+    .audit-badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:26px 0}
+    .audit-badge{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font:500 12px var(--mono);color:#55555a;background:#fff}
+    .audit-form-section{padding:20px 0 90px}
+    .audit-form-card{max-width:520px;margin:0 auto;border:1px solid var(--line);border-radius:10px;padding:30px}
+    .audit-form-card h2{font-size:22px;letter-spacing:-.8px;margin:0 0 8px}
+    .audit-form-card>p{color:var(--muted);font-size:14px;margin:0 0 24px}
+    .audit-includes{background:#f7f7f7;border-radius:10px;padding:28px;max-width:640px;margin:40px auto 0;text-align:left}
+    .audit-includes h3{font-size:16px;margin:0 0 14px}
+    .audit-includes ul{margin:0;padding-left:20px;color:var(--muted);font-size:14px;line-height:1.9}
+  </style>
+</head>
+<body>
+  <header class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Web Perdictors home"><span class="brand-mark">W</span>eb Perdictors</a>
+      <a class="text-link" href="/">Back to site</a>
+    </div>
+  </header>
+
+  <section class="audit-hero">
+    <div class="container audit-wrap">
+      <p class="eyebrow" style="justify-content:center"><span></span> FREE, NO-OBLIGATION</p>
+      <h1 style="font-size:clamp(32px,4.5vw,48px);max-width:600px;margin:0 auto">Get a Free Audit of Your Website or App</h1>
+      <p class="hero-lede" style="margin:20px auto;max-width:520px">We'll review your site for performance, conversion, design and AI-readiness — and send you a clear, actionable report within 48 hours. No strings attached.</p>
+      <div class="audit-badges">
+        <span class="audit-badge">Performance check</span>
+        <span class="audit-badge">Conversion review</span>
+        <span class="audit-badge">Design feedback</span>
+        <span class="audit-badge">AI-readiness score</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="audit-form-section">
+    <div class="container">
+      <div class="audit-form-card">
+        <h2>Request your free audit</h2>
+        <p>Takes 30 seconds. We'll reply within 48 hours.</p>
+        <form id="audit-form">
+          <label>Your name<input required name="name" placeholder="Your name" /></label>
+          <label>Email<input required type="email" name="email" placeholder="you@company.com" /></label>
+          <label>Website or app URL<input required type="url" name="url" placeholder="https://yourcompany.com" /></label>
+          <label>Anything specific you'd like reviewed? (optional)<textarea name="notes" rows="3" placeholder="e.g. slow load times, low sign-ups, outdated design..."></textarea></label>
+          <input type="hidden" name="_subject" value="New Free Audit Request" />
+          <button class="button button-pink submit" type="submit">Request Free Audit <i data-lucide="arrow-up-right"></i></button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="audit-includes">
+        <h3>What you'll get back</h3>
+        <ul>
+          <li>A short video or written breakdown of what's working and what's not</li>
+          <li>3–5 specific, prioritised fixes you can act on immediately</li>
+          <li>An honest note on whether AI or automation could save you time or money</li>
+          <li>No sales pressure — if it's useful on its own, that's the point</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:35px 0;text-align:center">
+    <div class="container">
+      <span style="font:400 11px var(--mono);color:#78787d">© 2026 Web Perdictors. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    document.querySelector('#audit-form').addEventListener('submit', async e => {
+      e.preventDefault();
+      const form = e.currentTarget;
+      const status = form.querySelector('.form-status');
+      const button = form.querySelector('button[type="submit"]');
+      const originalButtonText = button.innerHTML;
+      button.disabled = true;
+      button.textContent = 'Sending…';
+      status.textContent = '';
+      status.classList.remove('form-status-error','form-status-success');
+      try {
+        const response = await fetch('https://formspree.io/f/moeabgjk', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          status.textContent = 'Thanks — your audit request is in. We\u2019ll email you within 48 hours.';
+          status.classList.add('form-status-success');
+          form.reset();
+        } else {
+          const data = await response.json().catch(() => null);
+          const message = data && data.errors && data.errors.length ? data.errors.map(x => x.message).join(', ') : 'Something went wrong. Please try again or email us directly.';
+          status.textContent = message;
+          status.classList.add('form-status-error');
+        }
+      } catch (err) {
+        status.textContent = 'Something went wrong. Please check your connection and try again.';
+        status.classList.add('form-status-error');
+      } finally {
+        button.disabled = false;
+        button.innerHTML = originalButtonText;
+      }
+    });
+    if (window.lucide) lucide.createIcons();
+  </script>
+</body>
+</html>
