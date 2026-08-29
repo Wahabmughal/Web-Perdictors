@@ -1,6 +1,7 @@
 const services=[
  ['layout-template','Bubble Development',"Build powerful web applications and SaaS products using Bubble's flexible no-code platform.",['SaaS applications','MVP development','Marketplace platforms','Complex workflows','API integrations']],
  ['sparkles','AI Integration','Bring AI into your product with practical, business-focused implementations.',['OpenAI integrations','AI assistants','Content generation','AI automation','AI workflows']],
+ ['bot','AI-Powered Website Development','Custom-coded websites built faster using advanced AI coding tools like Claude, Codex and Cursor — without sacrificing quality or performance.',['Claude Code','Codex','Cursor','Rapid prototyping','Custom code']],
  ['pen-tool','UI/UX Design','Create intuitive, conversion-focused interfaces that users actually enjoy.',['Product design','Responsive design','Design systems','Wireframes','UX optimisation']],
  ['plug-zap','API & Third-Party Integrations','Connect your product with the tools your business already depends on.',['Stripe','Twilio','SendGrid','Google APIs','Custom APIs']],
  ['layers-3','SaaS & Marketplace Development','Turn your business model into a scalable digital platform.',['Multi-user platforms','Subscription systems','Payments','Dashboards','Admin systems']],
